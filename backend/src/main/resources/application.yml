@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/invoices
+    username: ${DB_USER:invoices}
+    password: ${DB_PASSWORD:invoices}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${ISSUER_URI:http://localhost:9000}
+          audiences: invoice-api
