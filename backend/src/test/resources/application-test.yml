@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:inv-${random.uuid};MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost/unused-in-tests
